@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaadTV</title>
+  <meta name="description" content="SaadTV - تطبيق لاستعراض الأفلام والمسلسلات.">
+  <meta name="theme-color" content="#090909">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #090909;
+      color: #fff;
+      line-height: 1.8;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      background:
+        radial-gradient(circle at 70% 20%, rgba(220, 25, 45, .28), transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(35, 35, 35, .8), transparent 40%),
+        #090909;
+    }
+    .container {
+      width: min(100%, 1000px);
+      margin: auto;
+    }
+    .card {
+      background: rgba(22,22,22,.94);
+      border: 1px solid #292929;
+      border-radius: 28px;
+      padding: 48px 28px;
+      text-align: center;
+      box-shadow: 0 20px 70px rgba(0,0,0,.45);
+    }
+    .logo {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 20px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      background: #e51b2b;
+      font-size: 32px;
+      font-weight: 900;
+      box-shadow: 0 12px 35px rgba(229,27,43,.3);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(38px, 8vw, 68px);
+      font-weight: 900;
+    }
+    .tagline {
+      margin: 0 auto 28px;
+      color: #bdbdbd;
+      font-size: 18px;
+      max-width: 650px;
+    }
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 42px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: white;
+      background: #e51b2b;
+      font-weight: bold;
+    }
+    .btn.secondary {
+      background: #252525;
+      border: 1px solid #3a3a3a;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      text-align: right;
+    }
+    .feature {
+      padding: 22px;
+      border-radius: 18px;
+      background: #151515;
+      border: 1px solid #252525;
+    }
+    .feature h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .feature p {
+      margin: 0;
+      color: #aaa;
+      font-size: 14px;
+    }
+    section {
+      padding: 70px 20px;
+      border-top: 1px solid #1d1d1d;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+    section p {
+      color: #bdbdbd;
+      max-width: 800px;
+    }
+    footer {
+      padding: 28px 20px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #1d1d1d;
+      font-size: 13px;
+    }
+    @media (max-width: 700px) {
+      .card { padding: 36px 18px; }
+      .features { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding: 40px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="card">
+          <div class="logo">S</div>
+          <h1>SaadTV</h1>
+          <p class="tagline">
+            تطبيق لاستعراض الأفلام والمسلسلات وتنظيم المحتوى
+            بطريقة بسيطة وسهلة الاستخدام.
+          </p>
+
+          <div class="buttons">
+            <a class="btn" href="#about">عن التطبيق</a>
+            <a class="btn secondary" href="#contact">تواصل معنا</a>
+          </div>
+
+          <div class="features">
+            <div class="feature">
+              <h2>🎬 الأفلام</h2>
+              <p>استعراض معلومات الأفلام وتنظيمها داخل التطبيق.</p>
+            </div>
+            <div class="feature">
+              <h2>📺 المسلسلات</h2>
+              <p>تصفح المسلسلات والحلقات بطريقة مرتبة.</p>
+            </div>
+            <div class="feature">
+              <h2>⭐ تجربة بسيطة</h2>
+              <p>واجهة سهلة وسريعة للوصول إلى المحتوى.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>عن SaadTV</h2>
+        <p>
+          SaadTV هو مشروع تطبيق يهدف إلى توفير واجهة منظمة
+          لاستعراض الأفلام والمسلسلات ومعلوماتها.
+        </p>
+        <p>
+          هذه الصفحة هي الصفحة التعريفية الرسمية للمشروع.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>تواصل معنا</h2>
+        <p>
+          للاستفسارات أو الملاحظات المتعلقة بتطبيق SaadTV،
+          يمكنك إضافة وسيلة التواصل الخاصة بالمشروع هنا.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 SaadTV — جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
