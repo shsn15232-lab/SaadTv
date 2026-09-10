@@ -1,0 +1,12 @@
+{
+  "name": "saadtv-vcdn-backend",
+  "version": "1.0.0",
+  "description": "SaadTV VCDN backend",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
