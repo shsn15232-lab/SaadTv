@@ -1,128 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#070707">
-<title>Saad TV — عالم المسلسلات والأفلام</title>
+<meta name="description" content="Saad TV - عالم المسلسلات والأفلام">
+<title>Saad TV | عالم المسلسلات والأفلام</title>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070707;color:#fff;font-family:Tahoma,Arial,sans-serif}
-a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
-header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.88);backdrop-filter:blur(12px);border-bottom:1px solid #222}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;font-size:27px;font-weight:900;direction:ltr}.logo{width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,#ff4a55,#e50914);display:grid;place-items:center;box-shadow:0 8px 30px #e5091438}.logo:after{content:"";margin-left:3px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid white}
-.brand b{color:#fff}.brand span{color:#e50914}
-nav{display:flex;gap:28px;color:#ccc;font-size:15px}nav a:hover{color:#fff}
-.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 45%,#e5091425,transparent 38%),radial-gradient(circle at 85% 35%,#e5091418,transparent 35%);pointer-events:none}
-.hero-copy{position:relative;z-index:2}.eyebrow{color:#e50914;font-weight:800;margin-bottom:14px}.title{font-size:clamp(48px,7vw,82px);line-height:1;margin:0 0 16px;direction:ltr}.title span{color:#e50914}.subtitle{font-size:28px;font-weight:800;margin:0 0 18px}.desc{color:#aaa;font-size:18px;line-height:2;max-width:650px}
-.download{display:inline-flex;align-items:center;gap:12px;margin-top:20px;background:linear-gradient(135deg,#ff2732,#e50914);padding:17px 30px;border-radius:18px;font-size:20px;font-weight:900;box-shadow:0 15px 45px #e5091430;transition:.2s}.download:hover{transform:translateY(-3px);box-shadow:0 20px 55px #e5091450}.download small{display:block;font-size:12px;opacity:.85}
-.meta{display:flex;gap:18px;margin-top:18px;color:#aaa;font-size:14px;flex-wrap:wrap}.meta strong{color:#fff}
-.phone-area{position:relative;min-height:540px;display:grid;place-items:center}.glow{position:absolute;width:390px;height:390px;background:#e5091430;filter:blur(80px);border-radius:50%}
-.phone{width:285px;height:555px;border:8px solid #202020;border-radius:42px;background:#111;box-shadow:0 30px 80px #000,0 0 50px #e5091425;position:relative;padding:13px;transform:rotate(5deg);z-index:2}.phone:before{content:"";width:105px;height:23px;border-radius:0 0 15px 15px;background:#050505;position:absolute;top:-2px;left:50%;transform:translateX(-50%);z-index:4}
-.screen{height:100%;border-radius:29px;overflow:hidden;background:linear-gradient(#181818,#090909);padding:18px 13px}.screen-brand{font-weight:900;font-size:20px;direction:ltr;margin:20px 0}.screen-brand span{color:#e50914}.banner{height:145px;border-radius:18px;background:linear-gradient(135deg,#3b1719,#111);padding:20px;display:flex;align-items:end;font-size:22px;font-weight:900}.pill{display:inline-block;background:#e50914;border-radius:20px;padding:7px 12px;font-size:11px;margin-top:10px}.section-title{font-weight:900;margin:20px 0 10px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.card{height:100px;border-radius:10px;background:linear-gradient(135deg,#292929,#111);border:1px solid #292929;padding:8px;display:flex;align-items:end;font-size:12px;font-weight:800}
-.features{border-top:1px solid #222;border-bottom:1px solid #222;padding:50px 0}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature{padding:25px;text-align:center;background:#101010;border:1px solid #202020;border-radius:18px}.icon{font-size:30px;color:#e50914}.feature h3{margin:12px 0 8px}.feature p{color:#999;line-height:1.7;margin:0}
-.content{padding:80px 0}.center{text-align:center}.line{width:55px;height:3px;background:#e50914;margin:0 auto 15px}.content h2{font-size:34px;margin:0 0 12px}.content p{color:#999}.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:35px}.cat{height:145px;border-radius:18px;display:flex;align-items:end;padding:17px;font-weight:900;font-size:16px;background:linear-gradient(145deg,#3a1719,#151515);border:1px solid #282828;transition:.2s}.cat:hover{transform:translateY(-5px);border-color:#e50914}
-.cta{text-align:center;padding:45px 20px;background:linear-gradient(90deg,#0b0b0b,#160808,#0b0b0b);border-top:1px solid #222}.cta h2{margin:0 0 20px}
-footer{border-top:1px solid #222;padding:35px 0;color:#888}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.copy{font-size:13px}
-@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding:55px 0}.desc{margin:auto}.phone-area{min-height:510px}.phone{transform:rotate(3deg) scale(.9)}.feature-grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.footer-row{flex-direction:column}.title{font-size:60px}.subtitle{font-size:23px}}
-@media(max-width:430px){.wrap{padding:0 15px}.hero{padding-top:40px}.phone{transform:scale(.82)}.phone-area{height:480px;margin-top:-25px}.feature-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.download{width:100%;justify-content:center}.meta{justify-content:center}.title{font-size:52px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Tahoma,sans-serif;background:#070707;color:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:100;background:rgba(7,7,7,.95);border-bottom:1px solid #222;backdrop-filter:blur(10px)}
+.navbar{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:25px;font-weight:900;color:#fff}
+.logo span{color:#e50914}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:#ccc}
+.navlinks a:hover{color:#fff}
+.hero{padding:75px 0 60px;text-align:center;background:radial-gradient(circle at center,#251010 0,#070707 58%)}
+.play{width:82px;height:82px;margin:0 auto 22px;border-radius:24px;background:#e50914;display:grid;place-items:center;box-shadow:0 12px 40px rgba(229,9,20,.3)}
+.play:after{content:"";margin-right:-6px;border-top:14px solid transparent;border-bottom:14px solid transparent;border-right:0;border-left:22px solid #fff}
+h1{font-size:clamp(42px,8vw,76px);line-height:1.1;margin-bottom:12px}
+.hero h1 span{color:#e50914}
+.hero p{max-width:650px;margin:0 auto 28px;color:#aaa;font-size:18px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:13px 22px;border-radius:12px;font-weight:800;transition:.2s;border:1px solid #333}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:#e50914;border-color:#e50914}
+.btn-dark{background:#151515}
+section{padding:65px 0}
+.section-title{text-align:center;font-size:32px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#111;border:1px solid #242424;border-radius:18px;padding:25px;text-align:center}
+.icon{font-size:32px;margin-bottom:10px}
+.card h3{margin-bottom:8px}
+.card p{color:#999;font-size:14px}
+.content-box{background:#111;border:1px solid #242424;border-radius:20px;padding:30px;text-align:center}
+.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tag{background:#1a1a1a;border:1px solid #292929;padding:9px 16px;border-radius:999px;color:#ddd}
+.faq{max-width:800px;margin:auto}
+details{background:#111;border:1px solid #242424;border-radius:14px;margin-bottom:12px;padding:17px 20px}
+summary{cursor:pointer;font-weight:800}
+details p{color:#aaa;margin-top:10px}
+.contact{background:linear-gradient(135deg,#160708,#0d0d0d);border:1px solid #302020;border-radius:24px;padding:40px;text-align:center}
+.email{display:inline-block;margin:18px 0;padding:13px 20px;background:#151515;border:1px solid #333;border-radius:12px;color:#fff}
+footer{border-top:1px solid #222;padding:30px 0;text-align:center;color:#777;font-size:13px}
+@media(max-width:750px){
+.navbar{padding:12px 0;align-items:flex-start;flex-direction:column}
+.navlinks{gap:12px;font-size:13px}
+.grid{grid-template-columns:1fr}
+.hero{padding-top:55px}
+section{padding:50px 0}
+.contact{padding:28px 18px}
+}
 </style>
-<style>
-.saad-nav{position:sticky;top:0;z-index:999;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px;background:rgba(7,7,7,.96);border-bottom:1px solid #292929}
-.saad-nav a,.quick-buttons a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px;background:#181818;border:1px solid #333;font-weight:700}
-.saad-nav a:hover,.btn-red{background:#e50914!important}
-.quick-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:22px 0}
-.quick-buttons a{display:inline-block}
-.saad-section{max-width:1000px;margin:42px auto;padding:0 20px;scroll-margin-top:80px}
-.saad-card{background:#111;border:1px solid #292929;border-radius:18px;padding:24px}
-.saad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
-.saad-mini{background:#181818;border-radius:14px;padding:18px}.saad-mini p{color:#aaa;line-height:1.7}
-.saad-faq details{background:#181818;border-radius:12px;margin:10px 0;padding:15px}.saad-faq summary{cursor:pointer;font-weight:700}
-@media(max-width:600px){.saad-nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.saad-nav a{white-space:nowrap}}
-</style></head>
-<body><div id="home"></div><nav class="saad-nav">
-<a href="#home">الرئيسية</a><a href="#download">تحميل التطبيق</a>
-<a href="#features">المميزات</a><a href="#content">المحتوى</a>
-<a href="#faq">الأسئلة الشائعة</a><a href="#contact">اتصل بنا</a>
-</nav><div class="quick-buttons">
-<a class="btn-red" href="https://github.com/shsn15232-lab/SaadTv/raw/refs/heads/main/SaadTV.apk" download id="download">⬇️ تحميل Saad TV</a>
-<a href="#features">✨ المميزات</a><a href="#faq">❓ الأسئلة الشائعة</a><a href="#contact">📩 اتصل بنا</a>
+</head>
+<body>
+
+<nav>
+<div class="container navbar">
+<a class="logo" href="#home">Saad <span>TV</span></a>
+<div class="navlinks">
+<a href="#home">الرئيسية</a>
+<a href="#download">تحميل التطبيق</a>
+<a href="#features">المميزات</a>
+<a href="#content">المحتوى</a>
+<a href="#faq">الأسئلة الشائعة</a>
+<a href="#contact">اتصل بنا</a>
 </div>
-<header><div class="wrap nav">
-<a class="brand" href="#"><i class="logo"></i><b>Saad <span>TV</span></b></a>
-<nav><a href="#home">الرئيسية</a><a href="#features">مميزات التطبيق</a><a href="#content">المحتوى</a><a href="#faq">الأسئلة الشائعة</a></nav>
-</div></header>
-
-<main id="home">
-<section class="wrap hero">
-<div class="hero-copy">
-<div class="eyebrow">الإصدار الجديد متوفر الآن</div>
-<h1 class="title">Saad <span>TV</span></h1>
-<h2 class="subtitle">عالم المسلسلات والأفلام</h2>
-<p class="desc">تطبيق Saad TV هو وجهتك لمتابعة المسلسلات والأفلام عبر واجهة عربية بسيطة وسريعة، مع تجربة مشاهدة مصممة لأجهزة الأندرويد.</p>
-<a class="download" href="https://github.com/shsn15232-lab/SaadTv/raw/refs/heads/main/SaadTV.apk" download download download>⬇️ <span>تحميل تطبيق Saad TV<small>APK • الإصدار 8.0</small></span></a>
-<div class="meta"><span>📦 حجم الملف: <strong>23.7 MB</strong></span><span>🤖 Android</span><span>🔴 الإصدار: <strong>8.0</strong></span></div>
 </div>
-<div class="phone-area"><div class="glow"></div><div class="phone"><div class="screen">
-<div class="screen-brand">▶ <b>Saad <span>TV</span></b></div>
-<div class="banner">أهلاً بك في Saad TV<br><span class="pill">شاهد الآن</span></div>
-<div class="section-title">أحدث المحتويات</div>
-<div class="cards"><div class="card">مسلسلات عربية</div><div class="card">مسلسلات تركية</div><div class="card">أفلام</div><div class="card">أنمي</div><div class="card">عراقي</div><div class="card">المفضلة</div></div>
-</div></div></div>
-</section>
+</nav>
 
-<section class="features" id="features"><div class="wrap feature-grid">
-<div class="feature"><div class="icon">▶</div><h3>واجهة سهلة</h3><p>تصميم عربي واضح وسهل الاستخدام.</p></div>
-<div class="feature"><div class="icon">HD</div><h3>جودة مشاهدة</h3><p>استمتع بالمحتوى المتاح بجودة مناسبة.</p></div>
-<div class="feature"><div class="icon">↻</div><h3>تحديث مستمر</h3><p>إضافة وتحسين المحتوى والميزات بشكل دوري.</p></div>
-<div class="feature"><div class="icon">▣</div><h3>يدعم أندرويد</h3><p>مصمم للعمل على أجهزة Android.</p></div>
-</div></section>
+<header class="hero" id="home">
+<div class="container">
+<div class="play"></div>
+<h1>Saad <span>TV</span></h1>
+<p>عالم المسلسلات والأفلام بين يديك. استمتع بتجربة مشاهدة بسيطة وسريعة عبر تطبيق Saad TV.</p>
+<div class="buttons">
+<a class="btn btn-red" href="https://github.com/shsn15232-lab/SaadTv/raw/refs/heads/main/SaadTV.apk" id="download">⬇️ تحميل Saad TV</a>
+<a class="btn btn-dark" href="#features">✨ اكتشف المميزات</a>
+<a class="btn btn-dark" href="#contact">📧 راسلنا</a>
+</div>
+</div>
+</header>
 
-<section class="content wrap" id="content">
-<div class="center"><div class="line"></div><h2>محتوى متنوع بانتظارك</h2><p>استكشف أقسام Saad TV من مكان واحد.</p></div>
-<div class="categories">
-<div class="cat">🎬 أفلام أجنبية</div><div class="cat">📺 مسلسلات عربية</div><div class="cat">🇹🇷 مسلسلات تركية</div><div class="cat">🍿 أفلام أنمي</div><div class="cat">⚽ محتوى رياضي</div>
+<section id="features">
+<div class="container">
+<h2 class="section-title">مميزات Saad TV</h2>
+<div class="grid">
+<div class="card"><div class="icon">🎬</div><h3>محتوى متنوع</h3><p>واجهة مخصصة للمسلسلات والأفلام والمحتوى التلفزيوني.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>تجربة بسيطة</h3><p>تصميم سريع وواضح للوصول إلى المحتوى بسهولة.</p></div>
+<div class="card"><div class="icon">📱</div><h3>مصمم للموبايل</h3><p>واجهة عربية RTL متوافقة مع شاشات الهواتف.</p></div>
+</div>
 </div>
 </section>
 
-<section class="cta"><h2>جاهز للتجربة؟</h2><a class="download" href="https://github.com/shsn15232-lab/SaadTv/raw/refs/heads/main/SaadTV.apk" download download download>⬇️ تحميل Saad TV — الإصدار 8.0</a></section>
-
-<section class="content wrap" id="faq">
-<div class="center"><div class="line"></div><h2>الأسئلة الشائعة</h2></div>
-<div style="max-width:800px;margin:30px auto;color:#bbb;line-height:2">
-<p><strong>هل التطبيق مجاني؟</strong><br>يمكن تحميل ملف APK من هذه الصفحة مجاناً.</p>
-<p><strong>ما إصدار التطبيق؟</strong><br>الإصدار الحالي المعروض في الموقع هو 8.0.</p>
-<p><strong>على أي أجهزة يعمل؟</strong><br>أجهزة Android المتوافقة مع التطبيق.</p>
+<section id="content">
+<div class="container">
+<h2 class="section-title">المحتوى</h2>
+<div class="content-box">
+<h3>عالم من المسلسلات والأفلام</h3>
+<p style="color:#999;margin-top:8px">نعمل على تطوير مكتبة Saad TV وإضافة المزيد من المحتوى المتاح بشكل رسمي.</p>
+<div class="tags">
+<span class="tag">مسلسلات عراقية</span>
+<span class="tag">مسلسلات عربية</span>
+<span class="tag">مسلسلات تركية</span>
+<span class="tag">أفلام</span>
+<span class="tag">أنمي</span>
+</div>
+</div>
 </div>
 </section>
-</main>
 
+<section id="download">
+<div class="container">
+<h2 class="section-title">حمّل التطبيق</h2>
+<div class="content-box">
+<p style="color:#aaa;margin-bottom:20px">نسخة Saad TV للأندرويد</p>
+<div class="buttons">
+<a class="btn btn-red" href="https://github.com/shsn15232-lab/SaadTv/raw/refs/heads/main/SaadTV.apk">⬇️ تحميل APK</a>
+</div>
+<p style="color:#777;margin-top:15px;font-size:13px">Android • SaadTV.apk</p>
+</div>
+</div>
+</section>
 
-<section id="features" class="saad-section"><div class="saad-card">
-<h2>✨ مميزات Saad TV</h2><div class="saad-grid">
-<div class="saad-mini"><h3>📺 مسلسلات وأفلام</h3><p>واجهة منظمة للوصول إلى المحتوى بسهولة.</p></div>
-<div class="saad-mini"><h3>🔎 بحث سريع</h3><p>العثور على العمل المطلوب بسرعة.</p></div>
-<div class="saad-mini"><h3>❤️ المفضلة</h3><p>الوصول السريع إلى الأعمال التي تهمك.</p></div>
-<div class="saad-mini"><h3>📱 تصميم مريح</h3><p>تجربة مناسبة للهواتف والشاشات المختلفة.</p></div>
-</div></div></section>
+<section id="faq">
+<div class="container">
+<h2 class="section-title">الأسئلة الشائعة</h2>
+<div class="faq">
+<details><summary>شنو هو Saad TV؟</summary><p>تطبيق ترفيهي يهدف إلى تنظيم وعرض محتوى المسلسلات والأفلام في واجهة عربية سهلة الاستخدام.</p></details>
+<details><summary>شلون أحمل التطبيق؟</summary><p>اضغط على أي زر «تحميل Saad TV» أو «تحميل APK» في الموقع.</p></details>
+<details><summary>شلون أتواصل وياكم؟</summary><p>اضغط على «اتصل بنا» أو «راسلنا» لإرسال رسالة إلى بريد Saad TV الرسمي.</p></details>
+</div>
+</div>
+</section>
 
-<section id="content" class="saad-section"><div class="saad-card">
-<h2>🎬 المحتوى</h2><p>نعمل على إضافة وتنظيم المحتوى باستمرار، مع الالتزام باستخدام المصادر والروابط المسموح بها من أصحاب الحقوق.</p>
-</div></section>
+<section id="contact">
+<div class="container">
+<div class="contact">
+<h2 class="section-title" style="margin-bottom:10px">اتصل بنا</h2>
+<p style="color:#aaa">للاستفسارات والاقتراحات والتعاون، تواصل معنا عبر البريد الرسمي.</p>
+<a class="email" href="mailto:saadtv2027@gmail.com?subject=التواصل%20مع%20Saad%20TV">📧 saadtv2027@gmail.com</a>
+<div class="buttons">
+<a class="btn btn-red" href="mailto:saadtv2027@gmail.com?subject=التواصل%20مع%20Saad%20TV&body=السلام%20عليكم،%0Aأرغب%20بالتواصل%20مع%20فريق%20Saad%20TV.">✉️ إرسال رسالة</a>
+<a class="btn btn-dark" href="#home">⬆️ العودة للرئيسية</a>
+</div>
+</div>
+</div>
+</section>
 
-<section id="faq" class="saad-section saad-faq"><div class="saad-card">
-<h2>❓ الأسئلة الشائعة</h2>
-<details><summary>شلون أحمل التطبيق؟</summary><p>اضغط «تحميل Saad TV» لتحميل ملف APK.</p></details>
-<details><summary>هل التطبيق مجاني؟</summary><p>نسخة التطبيق الموجودة في الموقع متاحة للتحميل مجاناً.</p></details>
-<details><summary>شلون أبلغ عن مشكلة؟</summary><p>استخدم قسم «اتصل بنا» للتواصل عند توفر وسيلة التواصل الرسمية.</p></details>
-<details><summary>شلون أقترح مسلسل؟</summary><p>تگدر ترسل اقتراحك من خلال وسيلة التواصل الرسمية.</p></details>
-</div></section>
+<footer>
+<div class="container">© 2026 Saad TV — جميع الحقوق محفوظة</div>
+</footer>
 
-<section id="contact" class="saad-section"><div class="saad-card" style="text-align:center">
-<h2>📩 اتصل بنا</h2><p>للاستفسارات والاقتراحات والإبلاغ عن مشاكل التطبيق.</p>
-<div class="quick-buttons"><a href="#home">⬆️ العودة للأعلى</a><a href="#download">⬇️ التحميل</a></div>
-</div></section>
-<footer><div class="wrap footer-row"><a class="brand" href="#"><i class="logo"></i><b>Saad <span>TV</span></b></a><div class="copy">© 2026 Saad TV — جميع الحقوق محفوظة</div></div></footer>
 </body>
 </html>
